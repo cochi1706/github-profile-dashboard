@@ -1,5 +1,5 @@
 /// <reference types="vitest/config" />
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 
 const githubPagesBase = process.env.GITHUB_PAGES_BASE ?? '/github-profile-dashboard/'

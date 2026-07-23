@@ -7,7 +7,7 @@
     "name": "Your GitHub Profile",
     "avatarUrl": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
     "htmlUrl": "https://github.com/your-github-username",
-    "bio": "Set GITHUB_USERNAME in GitHub Secrets and run the workflow to load your profile.",
+    "bio": "Set GH_USERNAME in GitHub Secrets and run the workflow to load your profile.",
     "followers": 128,
     "following": 74,
     "publicRepos": 24

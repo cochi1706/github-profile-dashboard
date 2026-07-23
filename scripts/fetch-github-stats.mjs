@@ -3,15 +3,15 @@
 import { mkdir, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 
-const username = process.env.GITHUB_USERNAME?.trim()
-const token = process.env.GITHUB_TOKEN?.trim() || process.env.GH_TOKEN?.trim()
+const username = process.env.GH_USERNAME?.trim()
+const token = process.env.GH_TOKEN?.trim()
 
 if (!username) {
-  throw new Error('Missing GITHUB_USERNAME. Set it in .env locally or GitHub Actions Secrets.')
+  throw new Error('Missing GH_USERNAME. Set it in .env locally or GitHub Actions Secrets.')
 }
 
 if (!token) {
-  throw new Error('Missing GITHUB_TOKEN. The token is required for authenticated GitHub API requests.')
+  throw new Error('Missing GH_TOKEN. The token is required for authenticated GitHub API requests.')
 }
 
 const apiBase = 'https://api.github.com'

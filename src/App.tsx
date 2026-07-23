@@ -123,7 +123,7 @@ function App() {
         {stats.source === 'sample' && (
           <div className="sample-banner">
             <span className="banner-icon"><Code2 size={17} /></span>
-            <span><strong>Sample data đang hiển thị.</strong> Đặt <code>GITHUB_USERNAME</code> trong Secrets rồi chạy workflow; <code>GITHUB_TOKEN</code> được GitHub cấp tự động.</span>
+            <span><strong>Sample data đang hiển thị.</strong> Đặt secret <code>GH_USERNAME</code> rồi chạy workflow; token có thể thêm dưới tên <code>GH_PAT</code> nếu cần hạn mức riêng.</span>
           </div>
         )}
 

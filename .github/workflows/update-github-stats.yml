@@ -1,0 +1,51 @@
+name: Update GitHub profile snapshot
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 4 * * *'
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'src/data/github-stats.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: github-profile-snapshot
+  cancel-in-progress: true
+
+jobs:
+  update-snapshot:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_USERNAME: ${{ secrets.GITHUB_USERNAME }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Fetch public GitHub metadata
+        run: npm run data:fetch
+
+      - name: Commit changed snapshot
+        run: |
+          if git diff --quiet -- src/data/github-stats.json; then
+            echo "Snapshot is already up to date."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/github-stats.json
+          git commit -m "chore: refresh GitHub profile snapshot"
+          git push

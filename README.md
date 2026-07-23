@@ -42,3 +42,7 @@ npm run data:fetch:local # nạp biến từ .env rồi lấy dữ liệu
 `scripts/fetch-github-stats.mjs` là data pipeline chạy ngoài trình duyệt. Script gọi endpoint user/repositories và endpoint languages cho từng repository, tính tổng stars, forks, issues, bytes ngôn ngữ rồi ghi snapshot có thể commit. `.github/workflows/update-github-stats.yml` là lớp tự động hóa duy nhất chạm vào secret.
 
 `src/data/github-stats.json` là dữ liệu runtime được frontend import. Đây là snapshot public, không phải nơi lưu credential. Khi muốn thay nguồn dữ liệu hoặc thêm chỉ số, cập nhật type, script pipeline, rồi nối trường mới vào UI.
+
+## Triển khai
+
+`.github/workflows/deploy-pages.yml` build bundle bằng Node 24 và publish lên GitHub Pages mỗi khi `main` đổi. Vite được cấu hình `base: '/github-profile-dashboard/'` để các asset tải đúng tại `https://cochi1706.github.io/github-profile-dashboard/`; override khi fork hoặc dùng domain riêng bằng biến môi trường `GITHUB_PAGES_BASE`. Trong **Settings → Pages**, chọn **Source: GitHub Actions** để workflow trên có quyền deploy.

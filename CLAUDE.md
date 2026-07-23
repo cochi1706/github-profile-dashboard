@@ -19,3 +19,7 @@ This is a React 18 + TypeScript single-page dashboard built with Vite. `src/main
 `.github/workflows/update-github-stats.yml` runs manually, daily, and on changes to `main` other than the generated snapshot. It supplies `secrets.GH_USERNAME` and `secrets.GH_PAT` (the latter is mapped to the `GH_TOKEN` environment variable), allows `contents: write`, and commits an updated `src/data/github-stats.json`. The generated snapshot is public display data; secrets must remain workflow/environment inputs and must not be imported by frontend code. Secret names must not begin with `GITHUB_`.
 
 `README.md` documents the setup, required repository secrets, and the intended data flow. `.env.example` is only a template and `.gitignore` excludes real environment files.
+
+## Deployment
+
+`.github/workflows/deploy-pages.yml` builds the Vite bundle with `actions/setup-node@v6` on Node.js 24, uploads the `dist/` artifact, and publishes it via `actions/deploy-pages@v4` whenever `main` changes. The Vite `base` path defaults to `/github-profile-dashboard/` so the built bundle resolves `/src/main.tsx` and assets correctly at the project-page URL; override locally with `GITHUB_PAGES_BASE` if the repo is renamed or served from a custom domain.

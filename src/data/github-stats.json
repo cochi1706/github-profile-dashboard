@@ -1,118 +1,77 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-23T00:00:00.000Z",
-  "source": "sample",
+  "generatedAt": "2026-07-23T09:43:19.836Z",
+  "source": "github-api",
   "user": {
-    "login": "your-github-username",
-    "name": "Your GitHub Profile",
-    "avatarUrl": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-    "htmlUrl": "https://github.com/your-github-username",
-    "bio": "Set GH_USERNAME in GitHub Secrets and run the workflow to load your profile.",
-    "followers": 128,
-    "following": 74,
-    "publicRepos": 24
+    "login": "cochi1706",
+    "name": "Quynh Chi",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/124018194?v=4",
+    "htmlUrl": "https://github.com/cochi1706",
+    "bio": null,
+    "followers": 1,
+    "following": 1,
+    "publicRepos": 1
   },
   "totals": {
-    "repositories": 24,
-    "originalRepositories": 20,
-    "stars": 684,
-    "forks": 96,
-    "openIssues": 18,
-    "sizeKb": 15360
+    "repositories": 1,
+    "originalRepositories": 1,
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 0
   },
   "languages": [
-    { "name": "TypeScript", "bytes": 640000, "percentage": 46.8, "repositories": 12, "color": "#3178c6" },
-    { "name": "JavaScript", "bytes": 330000, "percentage": 24.1, "repositories": 9, "color": "#f1e05a" },
-    { "name": "Python", "bytes": 185000, "percentage": 13.5, "repositories": 6, "color": "#3572A5" },
-    { "name": "CSS", "bytes": 97000, "percentage": 7.1, "repositories": 8, "color": "#563d7c" },
-    { "name": "HTML", "bytes": 61000, "percentage": 4.5, "repositories": 7, "color": "#e34c26" },
-    { "name": "Shell", "bytes": 54000, "percentage": 4.0, "repositories": 5, "color": "#89e051" }
+    {
+      "name": "TypeScript",
+      "bytes": 17886,
+      "percentage": 47.4,
+      "repositories": 1,
+      "color": "#3178c6"
+    },
+    {
+      "name": "CSS",
+      "bytes": 13262,
+      "percentage": 35.2,
+      "repositories": 1,
+      "color": "#563d7c"
+    },
+    {
+      "name": "JavaScript",
+      "bytes": 6092,
+      "percentage": 16.1,
+      "repositories": 1,
+      "color": "#f1e05a"
+    },
+    {
+      "name": "HTML",
+      "bytes": 489,
+      "percentage": 1.3,
+      "repositories": 1,
+      "color": "#e34c26"
+    }
   ],
   "repositories": [
     {
-      "name": "insight-board",
-      "fullName": "your-github-username/insight-board",
-      "description": "A focused analytics workspace for product teams.",
-      "htmlUrl": "https://github.com/your-github-username/insight-board",
+      "name": "github-profile-dashboard",
+      "fullName": "cochi1706/github-profile-dashboard",
+      "description": null,
+      "htmlUrl": "https://github.com/cochi1706/github-profile-dashboard",
       "primaryLanguage": "TypeScript",
-      "languages": { "TypeScript": 120000, "CSS": 18000, "HTML": 4000 },
-      "stars": 214,
-      "forks": 31,
-      "openIssues": 3,
-      "sizeKb": 4200,
-      "isFork": false,
-      "archived": false,
-      "license": "MIT",
-      "updatedAt": "2026-07-18T12:00:00Z",
-      "topics": ["analytics", "react", "typescript"]
-    },
-    {
-      "name": "automation-lab",
-      "fullName": "your-github-username/automation-lab",
-      "description": "Small automations that remove repetitive work.",
-      "htmlUrl": "https://github.com/your-github-username/automation-lab",
-      "primaryLanguage": "Python",
-      "languages": { "Python": 95000, "Shell": 12000 },
-      "stars": 149,
-      "forks": 28,
-      "openIssues": 1,
-      "sizeKb": 2800,
-      "isFork": false,
-      "archived": false,
-      "license": "Apache-2.0",
-      "updatedAt": "2026-07-11T08:30:00Z",
-      "topics": ["automation", "python"]
-    },
-    {
-      "name": "design-system",
-      "fullName": "your-github-username/design-system",
-      "description": "Accessible UI foundations and reusable components.",
-      "htmlUrl": "https://github.com/your-github-username/design-system",
-      "primaryLanguage": "JavaScript",
-      "languages": { "JavaScript": 87000, "CSS": 54000, "HTML": 15000 },
-      "stars": 98,
-      "forks": 14,
-      "openIssues": 7,
-      "sizeKb": 1900,
-      "isFork": false,
-      "archived": false,
-      "license": "MIT",
-      "updatedAt": "2026-06-29T16:45:00Z",
-      "topics": ["components", "accessibility", "ui"]
-    },
-    {
-      "name": "reading-notes",
-      "fullName": "your-github-username/reading-notes",
-      "description": "Notes and experiments from things worth learning.",
-      "htmlUrl": "https://github.com/your-github-username/reading-notes",
-      "primaryLanguage": "Markdown",
-      "languages": { "JavaScript": 33000, "HTML": 21000, "CSS": 14000 },
-      "stars": 76,
-      "forks": 9,
+      "languages": {
+        "TypeScript": 17886,
+        "CSS": 13262,
+        "JavaScript": 6092,
+        "HTML": 489
+      },
+      "stars": 0,
+      "forks": 0,
       "openIssues": 0,
-      "sizeKb": 1100,
+      "sizeKb": 0,
       "isFork": false,
       "archived": false,
       "license": null,
-      "updatedAt": "2026-06-14T10:15:00Z",
-      "topics": ["notes", "learning"]
-    },
-    {
-      "name": "open-source-toolkit",
-      "fullName": "your-github-username/open-source-toolkit",
-      "description": "Opinionated helpers for dependable open-source projects.",
-      "htmlUrl": "https://github.com/your-github-username/open-source-toolkit",
-      "primaryLanguage": "TypeScript",
-      "languages": { "TypeScript": 72000, "Shell": 18000 },
-      "stars": 61,
-      "forks": 8,
-      "openIssues": 2,
-      "sizeKb": 870,
-      "isFork": false,
-      "archived": false,
-      "license": "MIT",
-      "updatedAt": "2026-05-26T19:20:00Z",
-      "topics": ["open-source", "tooling"]
+      "updatedAt": "2026-07-23T09:12:52Z",
+      "topics": []
     }
   ]
 }

@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GH_USERNAME: ${{ secrets.GH_USERNAME }}
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      GH_TOKEN: ${{ secrets.GH_PAT }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
